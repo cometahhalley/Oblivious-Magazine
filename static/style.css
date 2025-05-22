@@ -1,0 +1,34 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del menú */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Imagen en la sección principal */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botón personalizado */
+.btn-primary {
+    background-color: #ff5733;
+    border-color: #ff5733;
+}
+
+.btn-primary:hover {
+    background-color: #cc4628;
+    border-color: #cc4628;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 50px;
+    font-size: 14px;
+}
