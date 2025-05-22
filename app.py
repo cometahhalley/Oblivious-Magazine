@@ -28,8 +28,12 @@ def numeros():
     return render_template('issues.html', issues=issues)
 
 @app.route('/collaboration')
-def colaboración():
+def colaboracion():
     return render_template('collaboration.html')
+
+@app.route('/publication')
+def colaboracion():
+    return render_template('publication.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
