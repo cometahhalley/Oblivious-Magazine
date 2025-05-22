@@ -11,25 +11,25 @@ def get_db_connection():
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('main.html')
 
-@app.route('/equipo')
+@app.route('/team')
 def equipo():
     conn = get_db_connection()
     members = conn.execute('SELECT * FROM team').fetchall()
     conn.close()
-    return render_template('equipo.html', members=members)
+    return render_template('team.html', members=members)
 
-@app.route('/numeros')
+@app.route('/issues')
 def numeros():
     conn = get_db_connection()
     issues = conn.execute('SELECT * FROM issues').fetchall()
     conn.close()
-    return render_template('numeros.html', issues=issues)
+    return render_template('issues.html', issues=issues)
 
-@app.route('/contacto')
-def contacto():
-    return render_template('contacto.html')
+@app.route('/collaboration')
+def colaboración():
+    return render_template('collaboration.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
