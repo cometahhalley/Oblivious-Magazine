@@ -32,8 +32,12 @@ def colaboracion():
     return render_template('collaboration.html')
 
 @app.route('/publication')
-def colaboracion():
+def publicacion():
     return render_template('publication.html')
+
+@app.route('/contact')
+def contacto():
+    return render_template('contact.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
