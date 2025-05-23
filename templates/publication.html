@@ -30,10 +30,11 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="container my-5">
-    <h2 class="text-center mb-4">Publication</h2>
+<main class="container my-5">
+  <div class="text-center">
+    <h2 class="mb-4">Publication</h2>
     <p>We would be delighted to receive your submissions. The submission process is very simple:</p>
-    <ol>
+    <ol class="d-inline-block text-start">
       <li>Make sure your work complies with the publication guidelines provided <strong>below</strong>.</li>
       <li>Send us your text or proposal (in Word format) along with the completed authorization form to our email:  
         <a href="mailto:revista.oblivious@gmail.com">revista.oblivious@gmail.com</a>
@@ -50,9 +51,10 @@
       <br><small>(Available in ES/VL/EN)</small>
     </p>
 
-    <h4 class="mt-5">Upcoming themes 2024/25</h4>
-    <img src="{{ url_for('static', filename='tematica.jpg') }}" class="img-fluid rounded mt-3" alt="Upcoming theme">
-  </main>
+    <h4 class="mt-5">Upcoming theme</h4>
+    <img src="{{ url_for('static', filename='prox-tematica.webp') }}" class="img-fluid rounded mt-3" alt="Upcoming theme">
+  </div>
+</main>
 
   <!-- Footer -->
   <footer class="text-center bg-dark text-white py-4 mt-5">
