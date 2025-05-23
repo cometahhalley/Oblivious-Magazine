@@ -3,13 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Oblivious Magazine</title>
+  <title>Team - Oblivious Magazine</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card-img-top {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      aspect-ratio: 1 / 1; /* square format */
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="{{ url_for('home') }}">Oblivious Magazine</a>
@@ -18,41 +27,34 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">About</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ url_for('numeros') }}">Issues</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ url_for('publicacion') }}">Publication</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ url_for('colaboracion') }}">Collaboration</a></li>
-          <li class="nav-item"><a class="nav-link active" href="{{ url_for('contacto') }}">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('contacto') }}">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ url_for('equipo') }}">Team</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Contact Content -->
+  <!-- Content -->
   <main class="container my-5">
-    <h2 class="text-center mb-4">Contact</h2>
-    <div class="text-center mx-auto" style="max-width: 700px;">
-      <p>
-        Do you have any questions about the magazine? Would you like to submit your own manuscripts or recommendations?
-        Is there a technical issue you'd like to report? You can always contact us via email or through our social media channels.
-      </p>
+    <h2 class="text-center mb-4">Our Team</h2>
+    <p class="text-center">These are the people who make <strong>Oblivious Magazine</strong> possible.</p>
 
-      <p>
-        For manuscript submissions or any publication-related inquiries, please contact us at:
-        <br><strong>revista.oblivious@gmail.com</strong>
-      </p>
-
-      <p>
-        For website-related issues or technical services, email us at:
-        <br><strong>info@revistaoblivious.com</strong>
-      </p>
-
-      <p>
-        You can find us on <strong>social media</strong> too! We’ll update this page as we create more profiles on relevant platforms.
-        <br><br>
-        Instagram: <a href="#">revista.oblivious</a>
-      </p>
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+      {% for member in members %}
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="{{ url_for('static', filename=member['photo']) }}" class="card-img-top" alt="Photo of {{ member['name'] }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ member['name'] }}</h5>
+            <p class="card-text mb-1"><strong>{{ member['role'] }}</strong></p>
+            <p class="card-text text-muted">{{ member['description'] }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </main>
 
