@@ -26,13 +26,15 @@
       <li>We will contact you again to inform you when and how your work will be published.</li>
     </ol>
 
-    <p>
-      <strong>Check the publication guidelines</strong> 👉  
-      <a href="https://example.com/normas" target="_blank">here</a><br>
-      <strong>Download the authorization form</strong> 👉  
-      <a href="https://example.com/autorizacion" target="_blank">here</a>  
-      <br><small>(Available in ES/VL/EN)</small>
-    </p>
+    <p class="mt-4 text-center">
+  <strong>Check the publication guidelines</strong> 👉  
+  <a href="{{ url_for('static', filename='guidelines.pdf') }}" target="_blank">here</a><br>
+
+  <strong>Download the authorization form</strong> 👉  
+  <a href="{{ url_for('static', filename='authorization.docx') }}" download>here</a><br>
+
+  <small>(Available in ES/VL/EN)</small>
+</p>
 
     <h4 class="mt-5">Upcoming theme</h4>
     <img src="{{ url_for('static', filename='prox-tematica.webp') }}" class="img-fluid rounded mt-3" alt="Upcoming theme">
