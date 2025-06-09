@@ -1,6 +1,6 @@
 import sqlite3
 
-connection = sqlite3.connect('revista.db')
+connection = sqlite3.connect('magazine.db')
 
 # Crear estructura
 with open('schema.sql') as f:
