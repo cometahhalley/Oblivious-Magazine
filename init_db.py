@@ -10,12 +10,12 @@ with open('schema.sql') as f:
 cur = connection.cursor()
 cur.execute(
     "INSERT INTO issues (issue_number, title, description, cover_image, published_date) VALUES (?, ?, ?, ?, ?)",
-    (12, '12. War, guilt and regret', 'Stories exploring conflict and its emotional aftermath.', 'PORTADA12.webp', '2025-05-29', 'issue12')
+    (12, '12. War, guilt and regret', 'Stories exploring conflict and its emotional aftermath.', 'PORTADA12.webp', '2025-05-29', 'issue12.pdf')
 )
 
 cur.execute(
     "INSERT INTO issues (issue_number, title, description, cover_image, published_date) VALUES (?, ?, ?, ?, ?)",
-    (11, '11. Fantasy and science fiction', 'A journey into alternate realities and impossible futures.', 'PORTADA11.webp', '2025-02-21', 'issue11')
+    (11, '11. Fantasy and science fiction', 'A journey into alternate realities and impossible futures.', 'PORTADA11.webp', '2025-02-21', 'issue11.pdf')
 )
 
 cur.execute("INSERT INTO team (name, role, photo, description) VALUES (?, ?, ?, ?)",
