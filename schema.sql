@@ -4,7 +4,8 @@ CREATE TABLE IF NOT EXISTS issues (
     title TEXT NOT NULL,
     description TEXT,
     cover_image TEXT,
-    published_date TEXT  -- formato recomendado: 'YYYY-MM-DD'
+    published_date TEXT,
+    file TEXT
 );
 
 CREATE TABLE IF NOT EXISTS team (
