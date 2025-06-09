@@ -27,6 +27,17 @@ img {
     border-color: #cc4628;
 }
 
+.btn-orange {
+  background-color: #ff7f00;
+  border: none;
+  color: white;
+}
+
+.btn-orange:hover {
+  background-color: #e76f00;
+  color: white;
+}
+
 /* Pie de página */
 footer {
     margin-top: 50px;
